@@ -1,10 +1,18 @@
-function Todo(){
+
+function Todo({task}){
+   function buttonclicked()
+    {
+      console.log(`deleted ${task}`)
+      
+    }
   return (
     <>
-    <div>
-        <h2>Learn react js </h2>
+
+    <div className="todo-item">
+        <h2>{task} </h2>
+        <button onClick={buttonclicked}>Delete</button>
     </div>
-    <button>Delete</button>
+    
 </>
   )
 }
